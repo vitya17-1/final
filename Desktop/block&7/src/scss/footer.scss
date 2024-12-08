@@ -1,0 +1,54 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer::before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #d9fff5;
+  position: absolute;
+}
+
+.footer__element {
+  margin-top: 32px;
+  max-width: 330px;
+  color: #7e7e82;
+  font-family: 'TTLakesRegular';
+  text-decoration: none;
+}
+
+.footer__element[href]:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1120px) {
+  .footer {
+    margin-left: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__element {
+    margin: auto;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__element:first-child {
+    margin-left: 5%;
+  }
+
+  .footer__element:last-child {
+    margin-right: 5%;
+  }
+}
